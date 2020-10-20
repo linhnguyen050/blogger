@@ -6,6 +6,7 @@ import Login from "./views/Login.vue";
 import Profile from "./views/Profile.vue";
 import MainNavbar from "./layout/MainNavbar.vue";
 import MainFooter from "./layout/MainFooter.vue";
+import AdminLogin from "./views/admin/Login.vue";
 
 Vue.use(Router);
 
@@ -44,6 +45,13 @@ export default new Router({
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: "black" }
+      }
+    },
+    {
+      path: "/admin/login",
+      name: "adminLogin",
+      components: {
+        default: AdminLogin
       }
     }
   ],
